@@ -1,0 +1,12 @@
+<div class="todo-list__empty">
+  <div class="todo-list__wrapper">
+    Add a reminder...
+  </div>
+</div>
+<ul class="todo-list"> 
+  {{#each todos as |todo index|}}
+    <li class="todo-list__item {{if (is-completed completed index) "todo-list__item--checked"}}"> 
+      {{todo}} 
+    </li>
+  {{/each}}
+</ul>
